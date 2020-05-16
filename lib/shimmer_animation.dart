@@ -8,7 +8,7 @@ class Shimmer extends StatelessWidget {
   final Widget child;
   final bool enabled;
 
-  Shimmer({@required this.child, this.enabled:true, this.color});
+  Shimmer({@required this.child, this.enabled: true, this.color});
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +17,7 @@ class Shimmer extends StatelessWidget {
       return Stack(
         children: <Widget>[
           child,
-          Positioned.fill(child: Animator(color:color)),
+          Positioned.fill(child: Animator(color: color)),
         ],
       );
     else
@@ -25,14 +25,14 @@ class Shimmer extends StatelessWidget {
   }
 }
 
-class Animator extends StatefulWidget{
+class Animator extends StatefulWidget {
   final Color color;
   Animator({this.color});
   @override
   _AnimatorState createState() => _AnimatorState();
 }
 
-class _AnimatorState extends State<Animator> with TickerProviderStateMixin{
+class _AnimatorState extends State<Animator> with TickerProviderStateMixin {
   Animation<double> animation;
   AnimationController controller;
   Duration duration;
