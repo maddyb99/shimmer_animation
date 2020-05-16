@@ -1,8 +1,8 @@
 name: shimmer_animation
 description: A new Flutter package.
 version: 0.0.1
-author:
-homepage:
+author: maddyb99 <maddybcorp@outlook.com>
+homepage: https://github.com/maddyb99/shimmer_animation
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
