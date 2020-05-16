@@ -1,3 +1,10 @@
+## [0.0.3] - 2020-05-16
+
+* Fix example not visible on pub
+* Add gif to readme
+* improve usability
+
+
 ## [0.0.2] - 2020-05-16
 
 * Added Example

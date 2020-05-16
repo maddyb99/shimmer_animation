@@ -3,7 +3,7 @@
 This is a new shimmer animation widget that can help you bring simple yet beutiful animations to your project with ease.
 
 A basic example of this is:
-![Shimmer Animation](/example/full_page/assets/shimmer.gif)
+![Shimmer Animation](https://github.com/maddyb99/shimmer_animation/blob/master/screenshots/shimmer.gif)
 
 ## Getting Started
 

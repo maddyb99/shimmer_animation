@@ -1,4 +1,4 @@
-name: fullpage
+name: example
 description: A new Flutter application.
 
 # The following line prevents the package from being accidentally published to
@@ -23,7 +23,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  shimmer_animation: ^0.0.1
+  shimmer_animation:
+    path: ../
 
 
   # The following adds the Cupertino Icons font to your application.
