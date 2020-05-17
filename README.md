@@ -4,17 +4,13 @@
 
 This is a new shimmer animation widget that can help you bring simple yet beautiful animations to your project with ease.
 
-A preview of this:
-
-![Shimmer Animation](https://github.com/maddyb99/shimmer_animation/blob/master/screenshots/shimmer.gif)
-
 ## How to use
 
 Add `shimmer_animation` to `pubspec.yaml` of your project:
 
 ```yaml
 dependencies:
-  shimmer_animation: ^0.0.3
+  shimmer_animation: ^0.0.4
 ```
 
 Import it in your Dart code:
@@ -27,12 +23,17 @@ Wrap any widget with `Shimmer()` widget to apply animaton:
 
 ```dart
 Shimmer(
-  color: Colors.black,
-  child: Container(
-    color: Colors.red,
+//        color: Colors.white, //Default value
+//        enabled: true,  //Default value
+    child: Container(
+      color: Colors.deepPurple,
+    ),
   ),
-),
 ```
+
+A preview of this:
+
+![Shimmer Animation](https://github.com/maddyb99/shimmer_animation/blob/master/screenshots/shimmer.gif)
 
 ## License
 

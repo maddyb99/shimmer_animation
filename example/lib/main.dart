@@ -19,9 +19,10 @@ class ShimmerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Shimmer(
-        color: Colors.black,
+//        color: Colors.white, //Default value
+//        enabled: true,  //Default value
         child: Container(
-          color: Colors.red,
+          color: Colors.deepPurple,
         ),
       ),
     );

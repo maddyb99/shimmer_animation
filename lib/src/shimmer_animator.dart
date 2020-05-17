@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:shimmer_animation/src/custom_shimmer_animation.dart';
 
@@ -9,7 +8,8 @@ class ShimmerAnimator extends StatefulWidget {
   _ShimmerAnimatorState createState() => _ShimmerAnimatorState();
 }
 
-class _ShimmerAnimatorState extends State<ShimmerAnimator> with TickerProviderStateMixin {
+class _ShimmerAnimatorState extends State<ShimmerAnimator>
+    with TickerProviderStateMixin {
   Animation<double> animation;
   AnimationController controller;
   Duration duration;
