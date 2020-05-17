@@ -1,17 +1,39 @@
 # shimmer_animation
 
-This is a new shimmer animation widget that can help you bring simple yet beutiful animations to your project with ease.
+[![pub package](https://img.shields.io/pub/v/shimmer_animation.svg)](https://pub.dev/packages/shimmer_animation)
 
-A basic example of this is:
+This is a new shimmer animation widget that can help you bring simple yet beautiful animations to your project with ease.
+
+A preview of this:
+
 ![Shimmer Animation](https://github.com/maddyb99/shimmer_animation/blob/master/screenshots/shimmer.gif)
 
-## Getting Started
+## How to use
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
+Add `shimmer_animation` to `pubspec.yaml` of your project:
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+```yaml
+dependencies:
+  shimmer_animation: ^0.0.3
+```
+
+Import it in your Dart code:
+
+```dart
+import 'package:shimmer_animation/shimmer_animation.dart';
+```
+
+Wrap any widget with `Shimmer()` widget to apply animaton:
+
+```dart
+Shimmer(
+  color: Colors.black,
+  child: Container(
+    color: Colors.red,
+  ),
+),
+```
+
+## License
+
+[MIT License](https://github.com/maddyb99/shimmer_animation/blob/master/LICENSE).
