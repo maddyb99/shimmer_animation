@@ -11,8 +11,8 @@ class Shimmer extends StatelessWidget {
 
   Shimmer({
     @required this.child,
-    this.enabled: true,
-    this.color,
+    this.enabled = true,
+    this.color = Colors.white,
     this.duration = const Duration(seconds: 3),
   });
 

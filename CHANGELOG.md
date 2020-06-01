@@ -1,3 +1,8 @@
+# [0.0.5] - 2020-06-01
+
+* Added possibility to change animation duration
+* (for developers) Moved all default values to one file
+
 ## [0.0.4] - 2020-05-17
 
 * Update example for better understanding

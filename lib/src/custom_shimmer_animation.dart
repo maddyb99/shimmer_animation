@@ -9,7 +9,7 @@ class CustomSplashAnimation extends CustomPainter {
   CustomSplashAnimation({
     @required this.context,
     @required this.position,
-    this.color = Colors.white,
+    @required this.color,
   });
 
   @override
