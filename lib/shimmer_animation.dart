@@ -7,8 +7,14 @@ class Shimmer extends StatelessWidget {
   final Color color;
   final Widget child;
   final bool enabled;
+  final Duration duration;
 
-  Shimmer({@required this.child, this.enabled: true, this.color});
+  Shimmer({
+    @required this.child,
+    this.enabled: true,
+    this.color,
+    this.duration = const Duration(seconds: 3),
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +23,12 @@ class Shimmer extends StatelessWidget {
       return Stack(
         children: <Widget>[
           child,
-          Positioned.fill(child: ShimmerAnimator(color: color)),
+          Positioned.fill(
+            child: ShimmerAnimator(
+              color: color,
+              duration: duration,
+            ),
+          ),
         ],
       );
     else

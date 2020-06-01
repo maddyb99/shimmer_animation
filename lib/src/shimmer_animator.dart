@@ -3,7 +3,9 @@ import 'package:shimmer_animation/src/custom_shimmer_animation.dart';
 
 class ShimmerAnimator extends StatefulWidget {
   final Color color;
-  ShimmerAnimator({this.color});
+  final Duration duration;
+  ShimmerAnimator({this.color, this.duration});
+
   @override
   _ShimmerAnimatorState createState() => _ShimmerAnimatorState();
 }
@@ -12,13 +14,11 @@ class _ShimmerAnimatorState extends State<ShimmerAnimator>
     with TickerProviderStateMixin {
   Animation<double> animation;
   AnimationController controller;
-  Duration duration;
 
   @override
   void initState() {
     super.initState();
-    duration = Duration(milliseconds: 3000);
-    controller = AnimationController(vsync: this, duration: duration);
+    controller = AnimationController(vsync: this, duration: widget.duration);
     animation = Tween<double>(begin: 0, end: 1).animate(CurvedAnimation(
         parent: controller, curve: Interval(0, 0.6, curve: Curves.decelerate)))
       ..addListener(() async {

@@ -23,6 +23,7 @@ Wrap any widget with `Shimmer()` widget to apply animaton:
 
 ```dart
 Shimmer(
+//        duration: Duration(seconds:3), //Default value
 //        color: Colors.white, //Default value
 //        enabled: true,  //Default value
     child: Container(
