@@ -5,13 +5,17 @@ class CustomSplashAnimation extends CustomPainter {
   double position;
   double width = 0.3;
   final Color color;
+  final Alignment begin,end;
 
   CustomSplashAnimation({
     @required this.context,
     @required this.position,
     @required this.color,
+    @required this.begin,
+    @required this.end,
   });
 
+  //Custom Painter to paint one frame of the animation. This is called in a loop to animate
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
@@ -19,8 +23,8 @@ class CustomSplashAnimation extends CustomPainter {
     paint.style = PaintingStyle.fill;
     paint.shader = LinearGradient(
       tileMode: TileMode.clamp,
-      begin: Alignment.topLeft,
-      end: Alignment.centerRight,
+      begin: begin,
+      end: end,
       stops: [position, position + width, position + width + 0.2],
       colors: [
         Colors.transparent,
