@@ -44,7 +44,7 @@ class ShimmerDirection{
   final Alignment begin,end;
 
   const ShimmerDirection._fromLTRB({this.begin=Alignment.topLeft,
-    this.end=Alignment.centerRight,});
+    this.end=Alignment.bottomRight,});
 
   const ShimmerDirection._fromRTLB({this.begin=Alignment.centerRight,
     this.end=Alignment.topLeft,});
