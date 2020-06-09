@@ -22,10 +22,11 @@ import 'package:shimmer_animation/shimmer_animation.dart';
 Wrap any widget with `Shimmer()` widget to apply animaton:
 
 ```dart
-Shimmer(
-//        duration: Duration(seconds:3), //Default value
-//        color: Colors.white, //Default value
-//        enabled: true,  //Default value
+  Shimmer(
+    duration: Duration(seconds: 3), //Default value
+    color: Colors.white, //Default value
+    enabled: true, //Default value
+    direction: ShimmerDirection.fromLTRB(),  //Default Value
     child: Container(
       color: Colors.deepPurple,
     ),
