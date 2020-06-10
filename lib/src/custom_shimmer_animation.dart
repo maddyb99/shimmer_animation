@@ -19,13 +19,14 @@ class CustomSplashAnimation extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
+    var stops=[position,(position+width)>1?1.0:position+width,(position+width+0.2)>1?1.0:position+width+0.2];
 //    position = 0.7;
     paint.style = PaintingStyle.fill;
     paint.shader = LinearGradient(
       tileMode: TileMode.clamp,
       begin: begin,
       end: end,
-      stops: [position, position + width, position + width + 0.2],
+      stops: stops,
       colors: [
         Colors.transparent,
         (color ?? Colors.white).withOpacity(0.1),
