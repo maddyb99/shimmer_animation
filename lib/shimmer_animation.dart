@@ -21,7 +21,6 @@ class Shimmer extends StatelessWidget {
   //Stacks the animation over the child if animation is enabled
   @override
   Widget build(BuildContext context) {
-    print("enabled: $enabled");
     if (enabled)
       return Stack(
         children: <Widget>[
