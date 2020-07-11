@@ -1,9 +1,16 @@
+# [0.0.8] - What's new!
+
+* Remove debug prints which were annoying for developers!
+
+# [0.0.7] - 2020-06-18
+
+* Fix issues with flutter web
+
 # [0.0.6] - 2020-06-01
 
 * Added possibility to change animation direction
 * You can now move the animation in 8 possible directions
 * You can now have the animation move in 8 possible directions
-* Fix issues with flutter web
 
 # [0.0.5] - 2020-06-01
 

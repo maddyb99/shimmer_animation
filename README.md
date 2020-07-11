@@ -10,7 +10,7 @@ Add `shimmer_animation` to `pubspec.yaml` of your project:
 
 ```yaml
 dependencies:
-  shimmer_animation: ^0.0.6
+  shimmer_animation: ^0.0.8
 ```
 
 Import it in your Dart code:

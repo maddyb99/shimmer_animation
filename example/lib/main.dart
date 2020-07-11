@@ -15,7 +15,6 @@ class FullPageShimmerExample extends StatelessWidget {
 }
 
 class ShimmerPage extends StatelessWidget {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +22,7 @@ class ShimmerPage extends StatelessWidget {
         duration: Duration(seconds: 3), //Default value
         color: Colors.white, //Default value
         enabled: true, //Default value
-        direction: ShimmerDirection.fromLTRB(),  //Default Value
+        direction: ShimmerDirection.fromLTRB(), //Default Value
         child: Container(
           color: Colors.deepPurple,
         ),

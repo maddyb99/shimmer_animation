@@ -39,42 +39,55 @@ class Shimmer extends StatelessWidget {
   }
 }
 
-class ShimmerDirection{
-  final Alignment begin,end;
+class ShimmerDirection {
+  final Alignment begin, end;
 
-  const ShimmerDirection._fromLTRB({this.begin=Alignment.topLeft,
-    this.end=Alignment.bottomRight,});
+  const ShimmerDirection._fromLTRB({
+    this.begin = Alignment.topLeft,
+    this.end = Alignment.bottomRight,
+  });
 
-  const ShimmerDirection._fromRTLB({this.begin=Alignment.centerRight,
-    this.end=Alignment.topLeft,});
+  const ShimmerDirection._fromRTLB({
+    this.begin = Alignment.centerRight,
+    this.end = Alignment.topLeft,
+  });
 
-  const ShimmerDirection._fromLBRT({this.begin=Alignment.bottomLeft,
-    this.end=Alignment.centerRight,});
+  const ShimmerDirection._fromLBRT({
+    this.begin = Alignment.bottomLeft,
+    this.end = Alignment.centerRight,
+  });
 
-  const ShimmerDirection._fromRBLT({this.begin=Alignment.topRight,
-    this.end=Alignment.centerLeft,});
+  const ShimmerDirection._fromRBLT({
+    this.begin = Alignment.topRight,
+    this.end = Alignment.centerLeft,
+  });
 
-  const ShimmerDirection._fromLeftToRight({this.begin=Alignment.centerLeft,
-  this.end=Alignment.centerRight,});
+  const ShimmerDirection._fromLeftToRight({
+    this.begin = Alignment.centerLeft,
+    this.end = Alignment.centerRight,
+  });
 
-  const ShimmerDirection._fromRightToLeft({this.begin=Alignment.centerLeft,
-  this.end=Alignment.centerRight,});
+  const ShimmerDirection._fromRightToLeft({
+    this.begin = Alignment.centerLeft,
+    this.end = Alignment.centerRight,
+  });
 
-  factory ShimmerDirection(){
-    var temp= ShimmerDirection._fromLTRB();
+  factory ShimmerDirection() {
+    var temp = ShimmerDirection._fromLTRB();
     return temp;
   }
 
-  const factory ShimmerDirection.fromLTRB()=ShimmerDirection._fromLTRB;
+  const factory ShimmerDirection.fromLTRB() = ShimmerDirection._fromLTRB;
 
-  const factory ShimmerDirection.fromRTLB()=ShimmerDirection._fromRTLB;
+  const factory ShimmerDirection.fromRTLB() = ShimmerDirection._fromRTLB;
 
-  const factory ShimmerDirection.fromLBRT()=ShimmerDirection._fromLBRT;
+  const factory ShimmerDirection.fromLBRT() = ShimmerDirection._fromLBRT;
 
-  const factory ShimmerDirection.fromRBLT()=ShimmerDirection._fromRBLT;
+  const factory ShimmerDirection.fromRBLT() = ShimmerDirection._fromRBLT;
 
-  const factory ShimmerDirection.fromLeftToRight()=ShimmerDirection._fromLeftToRight;
+  const factory ShimmerDirection.fromLeftToRight() =
+      ShimmerDirection._fromLeftToRight;
 
-  const factory ShimmerDirection.fromRightToLeftt()=ShimmerDirection._fromRightToLeft;
-
+  const factory ShimmerDirection.fromRightToLeftt() =
+      ShimmerDirection._fromRightToLeft;
 }

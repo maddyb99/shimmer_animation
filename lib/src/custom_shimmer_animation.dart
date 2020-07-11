@@ -5,7 +5,7 @@ class CustomSplashAnimation extends CustomPainter {
   double position;
   double width = 0.3;
   final Color color;
-  final Alignment begin,end;
+  final Alignment begin, end;
 
   CustomSplashAnimation({
     @required this.context,
@@ -19,7 +19,11 @@ class CustomSplashAnimation extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
-    var stops=[position,(position+width)>1?1.0:position+width,(position+width+0.2)>1?1.0:position+width+0.2];
+    var stops = [
+      position,
+      (position + width) > 1 ? 1.0 : position + width,
+      (position + width + 0.2) > 1 ? 1.0 : position + width + 0.2
+    ];
 //    position = 0.7;
     paint.style = PaintingStyle.fill;
     paint.shader = LinearGradient(
