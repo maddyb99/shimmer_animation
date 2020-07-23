@@ -14,7 +14,7 @@ A list of detailed examples can be found in this [Examples Repository](https://g
 
 |  Full Screen |  Individual Widgets |
 |---|---|
-|<img  height="500" src="https://github.com/maddyb99/shimmer_animation/blob/master/screenshots/shimmer.gif">| <img height="500" src="https://github.com/maddyb99/shimmer_examples/blob/master/loading_cards/screenshots/shimmer.gif?raw=true">|
+|<img  height="500" src="https://github.com/maddyb99/shimmer_animation/blob/master/screenshots/shimmer.gif?raw=true">| <img height="500" src="https://github.com/maddyb99/shimmer_examples/blob/master/loading_cards/screenshots/shimmer.gif?raw=true">|
 
 ## How to use
 
