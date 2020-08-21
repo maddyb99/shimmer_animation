@@ -6,7 +6,10 @@ class ShimmerAnimator extends StatefulWidget {
   final Color color;
   final Duration duration;
   final ShimmerDirection direction;
+  final Widget child;
+
   ShimmerAnimator({
+    this.child,
     @required this.color,
     @required this.duration,
     @required this.direction,
@@ -43,14 +46,14 @@ class _ShimmerAnimatorState extends State<ShimmerAnimator>
   @override
   Widget build(BuildContext context) {
     return CustomPaint(
-      painter: CustomSplashAnimation(
+      foregroundPainter: CustomSplashAnimation(
         context: context,
         position: animation.value,
         color: widget.color,
         begin: widget.direction.begin,
         end: widget.direction.end,
       ),
-      child: Container(),
+      child: widget.child,
     );
   }
 }

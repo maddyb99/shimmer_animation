@@ -1,4 +1,12 @@
-# [0.0.9] - What's new!
+# [0.1.0] - What's new!
+
+* Moved from Pre-release to Beta Testing
+* Added *Doc Comments* for easy reference
+* Added new examples GIF to readme
+* Fix typo in readme and source code
+* Remove redundant widget being used in the pipeline
+
+## [0.0.9] - 2020-07-23
 
 * Add new Examples
 * Update Readme
