@@ -4,9 +4,12 @@
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/pub/shimmer_animation)
 ![License](https://img.shields.io/github/license/maddyb99/shimmer_animation)
 
-_**Moved from Pre-release to Beta Testing**_
+_**Moved from Pre-release to Beta**_
 
 This animation widget can help you bring simple yet beautiful shimmer animations to your project with ease.
+
+Shimmer is very widely used in loading screens or placeholder widgets throughout the development community.
+Therefore, having an easy to use, yet customizable widget ready to use for Android, iOS and Web, gives developers an advantage to focus on their actual functionality, let shimmer make the loading experience smoother.
 
 ## Examples
 
@@ -24,7 +27,7 @@ Add `shimmer_animation` to `pubspec.yaml` of your project:
 
 ```yaml
 dependencies:
-  shimmer_animation: ^0.1.0
+  shimmer_animation: ^0.1.1
 ```
 
 Import it in your Dart code:
@@ -49,12 +52,13 @@ Wrap any widget with `Shimmer()` widget to apply animaton:
 
 ### Parameters:
 
-- required _**child**_ : accepts a child _Widget_ over which the animation is to be displayed
+- @required _**child**_ : accepts a child _Widget_ over which the animation is to be displayed
 - _**color**_ : accepts a parameter of type _Color_ and sets the color of the animation overlay. Default value is _Colors.white_
 - _**enabled**_ : accepts a _bool_ toggles animation. Default value is _true_
 - _**duration**_ : accepts a _Duration_ that would be the time period of animation. Default value is _Duration(seconds: 3)_
 - _**direction**_ : accepts a _ShimmerDirection_ and aligns the animation accordingly. Default value is _ShimmerDirection.fromLBRT()_
 
+A detailed API Reference can be found [here](https://pub.dev/documentation/shimmer_animation/latest/shimmer_animation/shimmer_animation-library.html).
 
 ## License
 

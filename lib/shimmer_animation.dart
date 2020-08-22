@@ -5,20 +5,31 @@ import 'package:shimmer_animation/src/shimmer_animator.dart';
 
 /// Creates simple yet beautiful shimmer animations
 ///
-/// This widget is easily customizable to configure some basic and advance aspects of itself
+/// Shimmer is very widely used in loading screens or placeholder widgets throughout the development community.
+/// Therefore, having an easy to use, yet customizable widget ready to use for Android, iOS and Web, gives developers an advantage to focus on their actual functionality, let shimmer make the loading experience smoother.
 ///
-/// By default, the widget will select the preset config but it can be easily customized
+/// By default, the widget will select the preset config but it can be easily customized as shown below:
 ///
-/// required [child] : accepts a child [Widget] over which the animation is to be displayed
-/// [color] : accepts a parameter of type [Color] and sets the color of the animation overlay. Default value is [Colors.white]
-/// [enabled] : accepts a [bool] toggles animation. Default value is [true]
-/// [duration] : accepts a [Duration] that would be the time period of animation. Default value is [Duration(seconds: 3)]
-/// [direction] : accepts a [ShimmerDirection] and aligns the animation accordingly. Default value is [ShimmerDirection.fromLBRT()]
+/// - @required [child] : accepts a child [Widget] over which the animation is to be displayed
+/// - [color] : accepts a parameter of type [Color] and sets the color of the animation overlay. Default value is [Colors.white]
+/// - [enabled] : accepts a [bool] toggles animation. Default value is [true]
+/// - [duration] : accepts a [Duration] that would be the time period of animation. Default value is [Duration(seconds: 3)]
+/// - [direction] : accepts a [ShimmerDirection] and aligns the animation accordingly. Default value is [ShimmerDirection.fromLBRT()]
 class Shimmer extends StatelessWidget {
+
+  /// Accepts a parameter of type [Color] and sets the color of the animation overlay. Default value is [Colors.white]
   final Color color;
+
+  /// Accepts a child [Widget] over which the animation is to be displayed
   final Widget child;
+
+  /// Accepts a [bool] toggles animation. Default value is [true]
   final bool enabled;
+
+  /// Accepts a [Duration] that would be the time period of animation. Default value is [Duration(seconds: 3)]
   final Duration duration;
+
+  /// Accepts a [ShimmerDirection] and aligns the animation accordingly. Default value is [ShimmerDirection.fromLBRT()]
   final ShimmerDirection direction;
 
   Shimmer({
@@ -49,14 +60,14 @@ class Shimmer extends StatelessWidget {
 /// Shimmer animation can travel in 6 possible directions:
 ///
 /// Diagonal Directions:
-/// 1. [ShimmerDirection.fromLTRB] : animation starts from Left Top and moves towards the Right Bottom. This is also the default behaviour if no direction is specified.
-/// 2. [ShimmerDirection.fromRTLB] : animation starts from Right Top and moves towards the Left Bottom
-/// 3. [ShimmerDirection.fromLBRT] : animation starts from Left Bottom and moves towards the Right Top
-/// 4. [ShimmerDirection.fromRBLT] : animation starts from Right Bottom and moves towards the Left Top
+/// - [ShimmerDirection.fromLTRB] : animation starts from Left Top and moves towards the Right Bottom. This is also the default behaviour if no direction is specified.
+/// - [ShimmerDirection.fromRTLB] : animation starts from Right Top and moves towards the Left Bottom
+/// - [ShimmerDirection.fromLBRT] : animation starts from Left Bottom and moves towards the Right Top
+/// - [ShimmerDirection.fromRBLT] : animation starts from Right Bottom and moves towards the Left Top
 ///
 /// Directions along the axes:
-/// 5. [ShimmerDirection.fromLeftToRight] : animation starts from Left Center and moves towards the Right Center
-/// 5. [ShimmerDirection.fromRightToLeft] : animation starts from Right Center and moves towards the Left Center
+/// - [ShimmerDirection.fromLeftToRight] : animation starts from Left Center and moves towards the Right Center
+/// - [ShimmerDirection.fromRightToLeft] : animation starts from Right Center and moves towards the Left Center
 class ShimmerDirection {
   final Alignment begin, end;
 
