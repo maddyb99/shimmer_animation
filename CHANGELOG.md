@@ -1,4 +1,10 @@
-# [0.1.X] - What's new!
+# [0.2.0] - What's new!
+
+* Added new feature to allow interval between shimmers
+* Update README
+* Update example
+
+## [0.1.x] - 2020-08-22
 
 * Moved from Pre-release to Beta Testing
 * Added **Doc Comments** for easy reference
@@ -7,6 +13,7 @@
 * Remove redundant widget being used in the pipeline
 * [0.1.0+1] : Updated README and Chengelog
 * [0.1.1] : Update API Docs
+* [0.1.1+1] : Fix formatting
 
 ## [0.0.9] - 2020-07-23
 

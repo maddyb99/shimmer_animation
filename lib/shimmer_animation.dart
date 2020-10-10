@@ -14,20 +14,23 @@ import 'package:shimmer_animation/src/shimmer_animator.dart';
 /// - [color] : accepts a parameter of type [Color] and sets the color of the animation overlay. Default value is [Colors.white]
 /// - [enabled] : accepts a [bool] toggles animation. Default value is [true]
 /// - [duration] : accepts a [Duration] that would be the time period of animation. Default value is [Duration(seconds: 3)]
+/// - [interval] : accepts a [Duration] that would be the interval between the repeating animation. Default value is [Duration(seconds: 0)]
 /// - [direction] : accepts a [ShimmerDirection] and aligns the animation accordingly. Default value is [ShimmerDirection.fromLBRT()]
 class Shimmer extends StatelessWidget {
-
-  /// Accepts a parameter of type [Color] and sets the color of the animation overlay. Default value is [Colors.white]
-  final Color color;
-
   /// Accepts a child [Widget] over which the animation is to be displayed
   final Widget child;
 
   /// Accepts a [bool] toggles animation. Default value is [true]
   final bool enabled;
 
+  /// Accepts a parameter of type [Color] and sets the color of the animation overlay. Default value is [Colors.white]
+  final Color color;
+
   /// Accepts a [Duration] that would be the time period of animation. Default value is [Duration(seconds: 3)]
   final Duration duration;
+
+  /// Accepts a [Duration] that would be the interval between the repeating animation. Default value is [Duration(seconds: 0)] i.e. no interval
+  final Duration interval;
 
   /// Accepts a [ShimmerDirection] and aligns the animation accordingly. Default value is [ShimmerDirection.fromLBRT()]
   final ShimmerDirection direction;
@@ -37,6 +40,7 @@ class Shimmer extends StatelessWidget {
     this.enabled = true,
     this.color = Colors.white,
     this.duration = const Duration(seconds: 3),
+    this.interval = const Duration(seconds: 0),
     this.direction = const ShimmerDirection.fromLTRB(),
   });
 
@@ -47,6 +51,7 @@ class Shimmer extends StatelessWidget {
         child: child,
         color: color,
         duration: duration,
+        interval: interval,
         direction: direction,
       );
     else

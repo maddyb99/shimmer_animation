@@ -5,13 +5,15 @@ import 'package:shimmer_animation/src/custom_shimmer_animation.dart';
 class ShimmerAnimator extends StatefulWidget {
   final Color color;
   final Duration duration;
+  final Duration interval;
   final ShimmerDirection direction;
   final Widget child;
 
   ShimmerAnimator({
-    this.child,
+    @required this.child,
     @required this.color,
     @required this.duration,
+    @required this.interval,
     @required this.direction,
   });
 
@@ -30,11 +32,15 @@ class _ShimmerAnimatorState extends State<ShimmerAnimator>
     super.initState();
     controller = AnimationController(vsync: this, duration: widget.duration);
     animation = Tween<double>(begin: 0, end: 1).animate(CurvedAnimation(
-        parent: controller, curve: Interval(0, 0.6, curve: Curves.decelerate)))
+      parent: controller,
+      curve: Interval(0, 0.6, curve: Curves.decelerate),
+    ))
       ..addListener(() async {
+        if (controller.isCompleted)
+          Future.delayed(widget.interval, () => controller.forward(from: 0));
         setState(() {});
       });
-    controller.repeat();
+    controller.forward();
   }
 
   @override

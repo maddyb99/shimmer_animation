@@ -41,6 +41,7 @@ Wrap any widget with `Shimmer()` widget to apply animaton:
 ```dart
   Shimmer(
     duration: Duration(seconds: 3), //Default value
+    interval: Duration(seconds: 5), //Default value: Duration(seconds: 0)
     color: Colors.white, //Default value
     enabled: true, //Default value
     direction: ShimmerDirection.fromLTRB(),  //Default Value
@@ -56,6 +57,7 @@ Wrap any widget with `Shimmer()` widget to apply animaton:
 - _**color**_ : accepts a parameter of type _Color_ and sets the color of the animation overlay. Default value is _Colors.white_
 - _**enabled**_ : accepts a _bool_ toggles animation. Default value is _true_
 - _**duration**_ : accepts a _Duration_ that would be the time period of animation. Default value is _Duration(seconds: 3)_
+- _**interval**_ : accepts a _Duration_ that would be the interval between the repeating animation. Default value is _Duration(seconds: 0)_ i.e. no interval
 - _**direction**_ : accepts a _ShimmerDirection_ and aligns the animation accordingly. Default value is _ShimmerDirection.fromLBRT()_
 
 A detailed API Reference can be found [here](https://pub.dev/documentation/shimmer_animation/latest/shimmer_animation/shimmer_animation-library.html).

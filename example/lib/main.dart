@@ -19,14 +19,16 @@ class ShimmerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Shimmer(
+        //Default value
         duration: Duration(seconds: 3),
+        //Default value: Duration(seconds: 0)
+        interval: Duration(seconds: 5),
         //Default value
         color: Colors.white,
         //Default value
         enabled: true,
         //Default value
         direction: ShimmerDirection.fromLTRB(),
-        //Default Value
         child: Container(
           color: Colors.deepPurple,
         ),
