@@ -11,7 +11,7 @@
 * Added new examples GIF to readme
 * Fix typo in readme and source code
 * Remove redundant widget being used in the pipeline
-* [0.1.0+1] : Updated README and Chengelog
+* [0.1.0+1] : Updated README and Changelog
 * [0.1.1] : Update API Docs
 * [0.1.1+1] : Fix formatting
 
