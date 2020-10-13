@@ -27,7 +27,7 @@ Add `shimmer_animation` to `pubspec.yaml` of your project:
 
 ```yaml
 dependencies:
-  shimmer_animation: ^0.1.1
+  shimmer_animation: ^0.2.1
 ```
 
 Import it in your Dart code:
@@ -50,6 +50,11 @@ Wrap any widget with `Shimmer()` widget to apply animaton:
     ),
   ),
 ```
+> ### Note
+>
+> The _**interval**_ property of **shimmer_animation** was introduced in v0.2.0 but had a bug which caused animation controller to throw a runtime exception as pointed out by [@budo76](https://github.com/budo76) in [#11](https://github.com/maddyb99/shimmer_animation/issues/11)
+>
+> This has been **patched** in **v0.2.1** so anyone using v0.2.0 and using interval should **Upgrade Immediately**
 
 ### Parameters:
 

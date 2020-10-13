@@ -37,7 +37,8 @@ class _ShimmerAnimatorState extends State<ShimmerAnimator>
     ))
       ..addListener(() async {
         if (controller.isCompleted)
-          Future.delayed(widget.interval, () => controller.forward(from: 0));
+          Future.delayed(widget.interval,
+              () => mounted ? controller.forward(from: 0) : null);
         setState(() {});
       });
     controller.forward();

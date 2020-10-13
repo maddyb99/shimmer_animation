@@ -1,8 +1,16 @@
-# [0.2.0] - What's new!
+# [0.2.1] - What's new!
 
 * Added new feature to allow interval between shimmers
+* Patched bug in interval in v0.2.0
 * Update README
 * Update example
+
+**Please upgrade to v0.2.1 instead of v0.2.0**
+## ~~[0.2.0] - What's new!~~
+
+* ~~Added new feature to allow interval between shimmers~~
+* ~~Update README~~
+* ~~Update example~~
 
 ## [0.1.x] - 2020-08-22
 
