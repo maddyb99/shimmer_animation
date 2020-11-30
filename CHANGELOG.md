@@ -1,4 +1,8 @@
-# [0.2.1] - What's new!
+# [1.0.0] - What's new!
+
+* No new bugs have been discovered in almost 2 months so promoting it to release
+
+## [0.2.1] - What's new!
 
 * Added new feature to allow interval between shimmers
 * Patched bug in interval in v0.2.0

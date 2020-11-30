@@ -4,7 +4,7 @@
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/pub/shimmer_animation)
 ![License](https://img.shields.io/github/license/maddyb99/shimmer_animation)
 
-_**Moved from Pre-release to Beta**_
+_**Moved from Beta to Release**_
 
 This animation widget can help you bring simple yet beautiful shimmer animations to your project with ease.
 
@@ -27,7 +27,7 @@ Add `shimmer_animation` to `pubspec.yaml` of your project:
 
 ```yaml
 dependencies:
-  shimmer_animation: ^0.2.1
+  shimmer_animation: ^1.0.0
 ```
 
 Import it in your Dart code:
