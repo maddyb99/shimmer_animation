@@ -10,11 +10,11 @@ class ShimmerAnimator extends StatefulWidget {
   final Widget child;
 
   ShimmerAnimator({
-    @required this.child,
-    @required this.color,
-    @required this.duration,
-    @required this.interval,
-    @required this.direction,
+    required this.child,
+    required this.color,
+    required this.duration,
+    required this.interval,
+    required this.direction,
   });
 
   @override
@@ -24,8 +24,8 @@ class ShimmerAnimator extends StatefulWidget {
 //Animator state controls the animation using all the parameters defined
 class _ShimmerAnimatorState extends State<ShimmerAnimator>
     with TickerProviderStateMixin {
-  Animation<double> animation;
-  AnimationController controller;
+  late Animation<double> animation;
+  late AnimationController controller;
 
   @override
   void initState() {
