@@ -2,11 +2,11 @@
 
 * Added support for null safety
 
-# [1.0.0] - What's new!
+## [1.0.0] - 2020-11-30
 
 * No new bugs have been discovered in almost 2 months so promoting it to release
 
-## [0.2.1] - What's new!
+## [0.2.1] - 2020-10-13
 
 * Added new feature to allow interval between shimmers
 * Patched bug in interval in v0.2.0
