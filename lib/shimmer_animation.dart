@@ -36,7 +36,7 @@ class Shimmer extends StatelessWidget {
   final ShimmerDirection direction;
 
   Shimmer({
-    @required this.child,
+    required this.child,
     this.enabled = true,
     this.color = Colors.white,
     this.duration = const Duration(seconds: 3),

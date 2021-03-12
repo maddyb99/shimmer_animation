@@ -8,11 +8,11 @@ class CustomSplashAnimation extends CustomPainter {
   final Alignment begin, end;
 
   CustomSplashAnimation({
-    @required this.context,
-    @required this.position,
-    @required this.color,
-    @required this.begin,
-    @required this.end,
+    required this.context,
+    required this.position,
+    required this.color,
+    required this.begin,
+    required this.end,
   });
 
   //Custom Painter to paint one frame of the animation. This is called in a loop to animate
@@ -33,7 +33,7 @@ class CustomSplashAnimation extends CustomPainter {
       stops: stops,
       colors: [
         Colors.transparent,
-        (color ?? Colors.white).withOpacity(0.1),
+        (color).withOpacity(0.1),
         Colors.transparent
       ],
     ).createShader(

@@ -1,3 +1,7 @@
+# [2.0.0] - What's new!
+
+* Added support for null safety
+
 # [1.0.0] - What's new!
 
 * No new bugs have been discovered in almost 2 months so promoting it to release
