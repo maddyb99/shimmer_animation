@@ -27,7 +27,7 @@ class CustomSplashAnimation extends CustomPainter {
       (position + (width * 2)) > 1 ? 1.0 : position + (width * 2),
       1.0
     ];
-   // position = 0.7;
+    // position = 0.7;
     paint.style = PaintingStyle.fill;
     paint.shader = LinearGradient(
       tileMode: TileMode.decal,
@@ -42,7 +42,12 @@ class CustomSplashAnimation extends CustomPainter {
         Colors.transparent
       ],
     ).createShader(
-        Rect.fromLTRB( size.width * -0.5 , (size.height > size.width) ? 0 : size.height * - 0.5, size.width * 1.5, size.height * 1.5 ));
+      Rect.fromLTRB(
+          size.width * -0.5,
+          (size.height > size.width) ? 0 : size.height * -0.5,
+          size.width * 1.5,
+          size.height * 1.5),
+    );
     var path = Path();
 
     path.lineTo(0, size.height);
