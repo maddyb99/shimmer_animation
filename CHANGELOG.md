@@ -1,4 +1,12 @@
-# [2.0.0] - What's new!
+# [2.1.0] - What's new!
+
+* _**Customisable Opacity**_ : Now you can set opacity of the colour of the animation with the new _colorOpacity_ parameter
+* Improve gradient look and feel by adding new stop points making a smoother gradient
+* Improve directional angle in landscape widgets
+* Update README
+
+
+## [2.0.0] - 2021-03-12
 
 * Added support for null safety
 

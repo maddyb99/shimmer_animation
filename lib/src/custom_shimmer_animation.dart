@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 class CustomSplashAnimation extends CustomPainter {
   final BuildContext context;
-  double position;
-  double width = 0.3;
+  double position, opacity;
+  double width = 0.2;
   final Color color;
   final Alignment begin, end;
 
@@ -11,6 +11,7 @@ class CustomSplashAnimation extends CustomPainter {
     required this.context,
     required this.position,
     required this.color,
+    required this.opacity,
     required this.begin,
     required this.end,
   });
@@ -20,24 +21,28 @@ class CustomSplashAnimation extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     var paint = Paint();
     var stops = [
+      0.0,
       position,
       (position + width) > 1 ? 1.0 : position + width,
-      (position + width + 0.2) > 1 ? 1.0 : position + width + 0.2
+      (position + (width * 2)) > 1 ? 1.0 : position + (width * 2),
+      1.0
     ];
-//    position = 0.7;
+   // position = 0.7;
     paint.style = PaintingStyle.fill;
     paint.shader = LinearGradient(
-      tileMode: TileMode.clamp,
+      tileMode: TileMode.decal,
       begin: begin,
       end: end,
       stops: stops,
       colors: [
         Colors.transparent,
-        (color).withOpacity(0.1),
+        (color).withOpacity(0.05),
+        (color).withOpacity(opacity),
+        (color).withOpacity(0.05),
         Colors.transparent
       ],
     ).createShader(
-        Rect.fromLTRB(-size.width / 2, 0, size.width * 1.5, size.height));
+        Rect.fromLTRB( size.width * -0.5 , (size.height > size.width) ? 0 : size.height * - 0.5, size.width * 1.5, size.height * 1.5 ));
     var path = Path();
 
     path.lineTo(0, size.height);

@@ -6,9 +6,9 @@
 
 _**Supports Null Safety**_
 
-This animation widget can help you bring simple yet beautiful shimmer animations to your project with ease.
+This shimmer animation widget can help you bring simple yet beautiful skeleton loaders to your project with ease.
 
-Shimmer is very widely used in loading screens or placeholder widgets throughout the development community.
+Shimmer is very widely used as the default animation for skeleton loaders or placeholder widgets throughout the development community.
 Therefore, having an easy to use, yet customizable widget ready to use for Android, iOS and Web, gives developers an advantage to focus on their actual functionality, let shimmer make the loading experience smoother.
 
 ## Examples
@@ -27,7 +27,7 @@ Add `shimmer_animation` to `pubspec.yaml` of your project:
 
 ```yaml
 dependencies:
-  shimmer_animation: ^2.0.0
+  shimmer_animation: ^2.1.0
 ```
 
 Import it in your Dart code:
@@ -40,9 +40,20 @@ Wrap any widget with `Shimmer()` widget to apply animaton:
 
 ```dart
   Shimmer(
+    child: Container(
+      color: Colors.deepPurple,
+    ),
+  ),
+```
+
+A number of parameters can be passed to customise the look and feel of this animation:
+
+```dart
+  Shimmer(
     duration: Duration(seconds: 3), //Default value
     interval: Duration(seconds: 5), //Default value: Duration(seconds: 0)
     color: Colors.white, //Default value
+    colorOpacity: 0, //Default value
     enabled: true, //Default value
     direction: ShimmerDirection.fromLTRB(),  //Default Value
     child: Container(
@@ -50,17 +61,14 @@ Wrap any widget with `Shimmer()` widget to apply animaton:
     ),
   ),
 ```
-> ### Note
->
-> The _**interval**_ property of **shimmer_animation** was introduced in v0.2.0 but had a bug which caused animation controller to throw a runtime exception as pointed out by [@budo76](https://github.com/budo76) in [#11](https://github.com/maddyb99/shimmer_animation/issues/11)
->
-> This has been **patched** in **v0.2.1** so anyone using v0.2.0 and using interval should **Upgrade Immediately**
+
 
 ### Parameters:
 
 - @required _**child**_ : accepts a child _Widget_ over which the animation is to be displayed
 - _**color**_ : accepts a parameter of type _Color_ and sets the color of the animation overlay. Default value is _Colors.white_
-- _**enabled**_ : accepts a _bool_ toggles animation. Default value is _true_
+- _**color**_ : accepts a parameter of type _double_ and sets the Opacity of the color of the animation overlay. Default value is _0.3_
+- _**enabled**_ : accepts a _bool_ which toggles the animation on/off. Default value is _true_
 - _**duration**_ : accepts a _Duration_ that would be the time period of animation. Default value is _Duration(seconds: 3)_
 - _**interval**_ : accepts a _Duration_ that would be the interval between the repeating animation. Default value is _Duration(seconds: 0)_ i.e. no interval
 - _**direction**_ : accepts a _ShimmerDirection_ and aligns the animation accordingly. Default value is _ShimmerDirection.fromLBRT()_

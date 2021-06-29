@@ -4,6 +4,7 @@ import 'package:shimmer_animation/src/custom_shimmer_animation.dart';
 
 class ShimmerAnimator extends StatefulWidget {
   final Color color;
+  final double opacity;
   final Duration duration;
   final Duration interval;
   final ShimmerDirection direction;
@@ -12,6 +13,7 @@ class ShimmerAnimator extends StatefulWidget {
   ShimmerAnimator({
     required this.child,
     required this.color,
+    required this.opacity,
     required this.duration,
     required this.interval,
     required this.direction,
@@ -57,6 +59,7 @@ class _ShimmerAnimatorState extends State<ShimmerAnimator>
         context: context,
         position: animation.value,
         color: widget.color,
+        opacity: widget.opacity,
         begin: widget.direction.begin,
         end: widget.direction.end,
       ),
