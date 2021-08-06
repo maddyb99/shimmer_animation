@@ -115,8 +115,6 @@ class ShimmerDirection {
     this.end = Alignment.centerRight,
   });
 
-  ShimmerDirection.custom({required this.begin, required this.end});
-
   factory ShimmerDirection() => ShimmerDirection._fromLTRB();
 
   /// Animation starts from Left Top and moves towards the Right Bottom
