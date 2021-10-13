@@ -26,7 +26,8 @@ class ShimmerAnimator extends StatefulWidget {
 }
 
 //Animator state controls the animation using all the parameters defined
-class _ShimmerAnimatorState extends State<ShimmerAnimator> with TickerProviderStateMixin {
+class _ShimmerAnimatorState extends State<ShimmerAnimator>
+  with TickerProviderStateMixin {
   late Animation<double> animation;
   late AnimationController controller;
   Timer? timer;
