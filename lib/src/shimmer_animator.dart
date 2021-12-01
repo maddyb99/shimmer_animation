@@ -9,17 +9,18 @@ class ShimmerAnimator extends StatefulWidget {
   final double opacity;
   final Duration duration;
   final Duration interval;
+  final Duration? delay;
   final ShimmerDirection direction;
   final Widget child;
 
-  ShimmerAnimator({
-    required this.child,
-    required this.color,
-    required this.opacity,
-    required this.duration,
-    required this.interval,
-    required this.direction,
-  });
+  ShimmerAnimator(
+      {required this.child,
+      required this.color,
+      required this.opacity,
+      required this.duration,
+      required this.interval,
+      required this.direction,
+      this.delay});
 
   @override
   _ShimmerAnimatorState createState() => _ShimmerAnimatorState();
@@ -44,7 +45,12 @@ class _ShimmerAnimatorState extends State<ShimmerAnimator>
         if (controller.isCompleted) timer = Timer(widget.interval, () => mounted ? controller.forward(from: 0) : null);
         setState(() {});
       });
-    controller.forward();
+    if (widget.delay == null) {
+      controller.forward();
+    } else {
+      Future.delayed(
+          widget.delay!, () => mounted ? controller.forward() : null);
+    }
   }
 
   @override

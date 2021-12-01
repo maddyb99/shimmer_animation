@@ -33,33 +33,36 @@ class Shimmer extends StatelessWidget {
   /// Accepts a [Duration] that would be the time period of animation. Default value is [Duration(seconds: 3)]
   final Duration duration;
 
+  /// [Duration] before the animation starts. Default value is [null] (no delay)
+  final Duration? delay;
+
   /// Accepts a [Duration] that would be the interval between the repeating animation. Default value is [Duration(seconds: 0)] i.e. no interval
   final Duration interval;
 
   /// Accepts a [ShimmerDirection] and aligns the animation accordingly. Default value is [ShimmerDirection.fromLBRT()]
   final ShimmerDirection direction;
 
-  Shimmer({
-    required this.child,
-    this.enabled = true,
-    this.color = Colors.white,
-    this.colorOpacity = 0.3,
-    this.duration = const Duration(seconds: 3),
-    this.interval = const Duration(seconds: 0),
-    this.direction = const ShimmerDirection.fromLTRB(),
-  });
+  Shimmer(
+      {required this.child,
+      this.enabled = true,
+      this.color = Colors.white,
+      this.colorOpacity = 0.3,
+      this.duration = const Duration(seconds: 3),
+      this.interval = const Duration(seconds: 0),
+      this.direction = const ShimmerDirection.fromLTRB(),
+      this.delay});
 
   @override
   Widget build(BuildContext context) {
     if (enabled)
       return ShimmerAnimator(
-        child: child,
-        color: color,
-        opacity: colorOpacity,
-        duration: duration,
-        interval: interval,
-        direction: direction,
-      );
+          child: child,
+          color: color,
+          opacity: colorOpacity,
+          duration: duration,
+          interval: interval,
+          direction: direction,
+          delay: delay);
     else
       return child;
   }
