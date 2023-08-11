@@ -17,6 +17,7 @@ import 'package:shimmer_animation/src/shimmer_animator.dart';
 /// - [duration] : accepts a [Duration] that would be the time period of animation. Default value is [Duration(seconds: 3)]
 /// - [interval] : accepts a [Duration] that would be the interval between the repeating animation. Default value is [Duration(seconds: 0)]
 /// - [direction] : accepts a [ShimmerDirection] and aligns the animation accordingly. Default value is [ShimmerDirection.fromLBRT()]
+/// - [animationController] : accepts a [AnimationController]. Recommended to use when multiple shimmer animations are used in a single screen.
 class Shimmer extends StatelessWidget {
   /// Accepts a child [Widget] over which the animation is to be displayed
   final Widget child;
@@ -39,6 +40,9 @@ class Shimmer extends StatelessWidget {
   /// Accepts a [ShimmerDirection] and aligns the animation accordingly. Default value is [ShimmerDirection.fromLBRT()]
   final ShimmerDirection direction;
 
+  /// Accepts a [AnimationController]. Recommended to use when multiple shimmer animations are used in a single screen.
+  final AnimationController? animationController;
+
   Shimmer({
     required this.child,
     this.enabled = true,
@@ -47,6 +51,7 @@ class Shimmer extends StatelessWidget {
     this.duration = const Duration(seconds: 3),
     this.interval = const Duration(seconds: 0),
     this.direction = const ShimmerDirection.fromLTRB(),
+    this.animationController,
   });
 
   @override
@@ -59,6 +64,7 @@ class Shimmer extends StatelessWidget {
         duration: duration,
         interval: interval,
         direction: direction,
+        controller: animationController,
       );
     else
       return child;
@@ -127,10 +133,8 @@ class ShimmerDirection {
   const factory ShimmerDirection.fromRBLT() = ShimmerDirection._fromRBLT;
 
   /// Animation starts from Left Center and moves towards the Right Center
-  const factory ShimmerDirection.fromLeftToRight() =
-      ShimmerDirection._fromLeftToRight;
+  const factory ShimmerDirection.fromLeftToRight() = ShimmerDirection._fromLeftToRight;
 
   /// Animation starts from Right Center and moves towards the Left Center
-  const factory ShimmerDirection.fromRightToLeft() =
-      ShimmerDirection._fromRightToLeft;
+  const factory ShimmerDirection.fromRightToLeft() = ShimmerDirection._fromRightToLeft;
 }
