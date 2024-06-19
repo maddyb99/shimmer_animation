@@ -1,4 +1,9 @@
-# [2.1.0] - What's new!
+# [2.2.0] - What's new!
+
+* Update flutter version to latest
+* Add and test Mac, Windows, and Linux support to the example
+
+## [2.1.0] - 2021-06-29
 
 * _[Feature]_ **Customisable Opacity** : Now you can set opacity of the colour of the animation with the new _colorOpacity_ parameter
 * Improve gradient look and feel by adding new stop points making a smoother gradient
