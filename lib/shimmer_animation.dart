@@ -51,7 +51,7 @@ class Shimmer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (enabled)
+    if (enabled) {
       return ShimmerAnimator(
         child: child,
         color: color,
@@ -60,8 +60,9 @@ class Shimmer extends StatelessWidget {
         interval: interval,
         direction: direction,
       );
-    else
+    } else {
       return child;
+    }
   }
 }
 

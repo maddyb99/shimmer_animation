@@ -1,4 +1,8 @@
-# [2.2.0] - What's new!
+# [2.2.1] - What's new!
+
+* Fix lint errors in code
+
+## [2.2.0] - 2024-06-19
 
 * Update flutter version to latest
 * Add and test Mac, Windows, and Linux support to the example

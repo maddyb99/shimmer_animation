@@ -22,12 +22,12 @@ class ShimmerAnimator extends StatefulWidget {
   });
 
   @override
-  _ShimmerAnimatorState createState() => _ShimmerAnimatorState();
+  State<ShimmerAnimator> createState() => _ShimmerAnimatorState();
 }
 
 //Animator state controls the animation using all the parameters defined
 class _ShimmerAnimatorState extends State<ShimmerAnimator>
-  with TickerProviderStateMixin {
+    with TickerProviderStateMixin {
   late Animation<double> animation;
   late AnimationController controller;
   Timer? timer;
@@ -41,7 +41,10 @@ class _ShimmerAnimatorState extends State<ShimmerAnimator>
       curve: Interval(0, 0.6, curve: Curves.decelerate),
     ))
       ..addListener(() async {
-        if (controller.isCompleted) timer = Timer(widget.interval, () => mounted ? controller.forward(from: 0) : null);
+        if (controller.isCompleted) {
+          timer = Timer(widget.interval,
+              () => mounted ? controller.forward(from: 0) : null);
+        }
         setState(() {});
       });
     controller.forward();
