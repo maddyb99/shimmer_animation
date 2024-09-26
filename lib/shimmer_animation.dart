@@ -2,6 +2,9 @@ library shimmer_animation;
 
 import 'package:flutter/material.dart';
 import 'package:shimmer_animation/src/shimmer_animator.dart';
+import 'package:shimmer_animation/src/shimmer_mode.dart';
+
+export 'src/shimmer_mode.dart' show ShimmerMode;
 
 /// Creates simple yet beautiful shimmer animations
 ///
@@ -36,8 +39,14 @@ class Shimmer extends StatelessWidget {
   /// Accepts a [Duration] that would be the interval between the repeating animation. Default value is [Duration(seconds: 0)] i.e. no interval
   final Duration interval;
 
+  /// Accepts a [Duration] that would be the delay time to begin animation. Default value is [Duration(seconds: 0)] i.e. no beginDelay
+  final Duration beginDelay;
+
   /// Accepts a [ShimmerDirection] and aligns the animation accordingly. Default value is [ShimmerDirection.fromLBRT()]
   final ShimmerDirection direction;
+
+  /// Accepts a [ShimmerMode] that could be set to either one-shot or repeat mode. Default value is [ShimmerMode.repeat]
+  final ShimmerMode mode;
 
   Shimmer({
     required this.child,
@@ -46,7 +55,9 @@ class Shimmer extends StatelessWidget {
     this.colorOpacity = 0.3,
     this.duration = const Duration(seconds: 3),
     this.interval = const Duration(seconds: 0),
+    this.beginDelay = const Duration(seconds: 0),
     this.direction = const ShimmerDirection.fromLTRB(),
+    this.mode = ShimmerMode.repeat
   });
 
   @override
@@ -58,7 +69,9 @@ class Shimmer extends StatelessWidget {
         opacity: colorOpacity,
         duration: duration,
         interval: interval,
+        beginDelay: beginDelay,
         direction: direction,
+        mode: mode,
       );
     } else {
       return child;
