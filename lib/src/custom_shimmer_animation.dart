@@ -58,5 +58,5 @@ class CustomSplashAnimation extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(CustomPainter oldDelegate) => true;
+  bool shouldRepaint(CustomSplashAnimation oldDelegate) => oldDelegate.position != position;
 }

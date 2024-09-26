@@ -3,13 +3,16 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:shimmer_animation/shimmer_animation.dart';
 import 'package:shimmer_animation/src/custom_shimmer_animation.dart';
+import 'package:shimmer_animation/src/shimmer_mode.dart';
 
 class ShimmerAnimator extends StatefulWidget {
   final Color color;
   final double opacity;
   final Duration duration;
   final Duration interval;
+  final Duration beginDelay;
   final ShimmerDirection direction;
+  final ShimmerMode mode;
   final Widget child;
 
   ShimmerAnimator({
@@ -18,7 +21,9 @@ class ShimmerAnimator extends StatefulWidget {
     required this.opacity,
     required this.duration,
     required this.interval,
+    required this.beginDelay,
     required this.direction,
+    required this.mode,
   });
 
   @override
@@ -31,28 +36,27 @@ class _ShimmerAnimatorState extends State<ShimmerAnimator>
   late Animation<double> animation;
   late AnimationController controller;
   Timer? timer;
+  late bool isRepeat;
 
   @override
   void initState() {
     super.initState();
+    isRepeat = widget.mode == ShimmerMode.repeat;
+
     controller = AnimationController(vsync: this, duration: widget.duration);
     animation = Tween<double>(begin: 0, end: 1).animate(CurvedAnimation(
       parent: controller,
       curve: Interval(0, 0.6, curve: Curves.decelerate),
     ))
-      ..addListener(() async {
-        if (controller.isCompleted) {
-          timer = Timer(widget.interval,
-              () => mounted ? controller.forward(from: 0) : null);
-        }
-        setState(() {});
-      });
-    controller.forward();
+      ..addListener(animationEventListener);
+    Future.delayed(widget.beginDelay, () => controller.forward(),);
   }
 
   @override
   void dispose() {
-    controller.dispose();
+    controller
+      ..removeListener(animationEventListener)
+      ..dispose();
     timer?.cancel();
     timer = null;
     super.dispose();
@@ -60,7 +64,7 @@ class _ShimmerAnimatorState extends State<ShimmerAnimator>
 
   @override
   Widget build(BuildContext context) {
-    return CustomPaint(
+    return controller.isAnimating ? CustomPaint(
       foregroundPainter: CustomSplashAnimation(
         context: context,
         position: animation.value,
@@ -70,6 +74,16 @@ class _ShimmerAnimatorState extends State<ShimmerAnimator>
         end: widget.direction.end,
       ),
       child: widget.child,
-    );
+    ) : widget.child;
+  }
+
+  void animationEventListener() {
+    if (controller.isCompleted) {
+      if (isRepeat) {
+        timer = Timer(widget.interval,
+                () => mounted ? controller.forward(from: 0) : null);
+      }
+    }
+    setState(() {});
   }
 }
