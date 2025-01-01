@@ -1,6 +1,6 @@
 name: shimmer_animation
 description: This shimmer animation widget can help you bring simple yet beautiful skeleton loaders to your project with ease.
-version: 2.2.1
+version: 2.2.2
 #author: maddyb99 <maddybcorp@outlook.com>
 homepage: https://github.com/maddyb99/shimmer_animation
 
@@ -14,7 +14,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  lints: ^4.0.0
+  lints: ^5.1.1
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

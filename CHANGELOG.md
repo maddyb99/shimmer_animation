@@ -1,4 +1,9 @@
-# [2.2.1] - What's new!
+# [2.2.2] - What's new!
+
+* Replace deprecated _**withOpacity()**_ function with the new _**withValues()**_ function
+* Upgrade package versions
+
+## [2.2.1] - 2024-06-19
 
 * Fix lint errors in code
 
