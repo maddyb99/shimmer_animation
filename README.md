@@ -3,85 +3,105 @@
 [![pub package](https://img.shields.io/pub/v/shimmer_animation.svg)](https://pub.dev/packages/shimmer_animation)
 ![Libraries.io dependency status for latest release](https://img.shields.io/librariesio/release/pub/shimmer_animation)
 ![License](https://img.shields.io/github/license/maddyb99/shimmer_animation)
+[![Null Safety](https://img.shields.io/badge/Null%20Safety-Supported-green)](https://dart.dev/null-safety)
 
-_**Supports Null Safety**_
+Shimmer Animation provides a simple and customizable widget to create **skeleton loaders** and **placeholder effects** with ease.  
+It works seamlessly across **Android**, **iOS**, and **Web**, helping developers improve the loading experience while focusing on core functionality.
 
-This shimmer animation widget can help you bring simple yet beautiful skeleton loaders to your project with ease.
+## Table of Contents
 
-Shimmer is very widely used as the default animation for skeleton loaders or placeholder widgets throughout the development community.
-Therefore, having an easy to use, yet customizable widget ready to use for Android, iOS and Web, gives developers an advantage to focus on their actual functionality, let shimmer make the loading experience smoother.
+-   [Why use this package?](#-why-use-this-package)
+-   [Examples](#-examples)
+-   [Installation](#-installation)
+-   [Quick Start](#-quick-start)
+-   [Contributing](#-contributing)
+-   [License](#-license)
 
-## Examples
+---
 
-An example can be found in the example directory of this repository.
+## ✨ Why use this package?
 
-A list of detailed examples can be found in this [Examples Repository](https://github.com/maddyb99/shimmer_examples)
+- Lightweight and easy to use  
+- Highly customizable (duration, interval, direction, color, opacity)  
+- Works across **Flutter mobile**, **web** and **desktop**
+- Perfect for **skeleton loaders** and **placeholder UIs**  
 
-|  Full Screen |  Loading Widgets | Loading Buttons |
-|---|---|---|
-|<img  height="400" src="https://github.com/maddyb99/shimmer_animation/blob/master/screenshots/shimmer.gif?raw=true">| <img height="400" src="https://github.com/maddyb99/shimmer_examples/blob/master/loading_cards/screenshots/shimmer.gif?raw=true">| <img height="400" src="https://github.com/maddyb99/shimmer_examples/blob/master/buttons/screenshots/shimmer.gif?raw=true">|
+## 📸 Examples
 
-## How to use
+- Full project example: [`example/`](./example)  
+- More detailed usage demos: [Shimmer Examples Repository](https://github.com/maddyb99/shimmer_examples)
 
-Add `shimmer_animation` to `pubspec.yaml` of your project:
+| Full Screen | Loading Widgets | Loading Buttons |
+|-------------|-----------------|-----------------|
+| <img height="400" src="https://github.com/maddyb99/shimmer_animation/blob/master/screenshots/shimmer.gif?raw=true"> | <img height="400" src="https://github.com/maddyb99/shimmer_examples/blob/master/loading_cards/screenshots/shimmer.gif?raw=true"> | <img height="400" src="https://github.com/maddyb99/shimmer_examples/blob/master/buttons/screenshots/shimmer.gif?raw=true"> |
 
-```yaml
-dependencies:
-  shimmer_animation: ^2.1.0
-```
+## 📦 Installation
 
-Import it in your Dart code:
+To add `shimmer_animation` to your project, add the following dependency to your `pubspec.yaml` file:
 
-```dart
-import 'package:shimmer_animation/shimmer_animation.dart';
-```
+  ```yaml
+  dependencies:
+    shimmer_animation: ^2.1.0
+  ```
+Then, run `flutter pub get` to install the package.
 
-Wrap any widget with `Shimmer()` widget to apply animaton:
+## 🚀 Quick Start
 
-```dart
+1. Import Package
+
+  ```dart
+  import 'package:shimmer_animation/shimmer_animation.dart';
+  ```
+2. Wrap Any Widget
+
+  ```dart
   Shimmer(
     child: Container(
       color: Colors.deepPurple,
     ),
-  ),
-```
+  )
+  ```
 
-A number of parameters can be passed to customise the look and feel of this animation:
+## ⚙️ Customization
 
-```dart
+The Shimmer widget exposes several parameters to control the animation:
+
+  ```dart
   Shimmer(
-    duration: Duration(seconds: 3), //Default value
-    interval: Duration(seconds: 5), //Default value: Duration(seconds: 0)
-    color: Colors.white, //Default value
-    colorOpacity: 0, //Default value
-    enabled: true, //Default value
-    direction: ShimmerDirection.fromLTRB(),  //Default Value
-    child: Container(
-      color: Colors.deepPurple,
-    ),
-  ),
-```
+      // The widget over which the animation is to be displayed.
+      required Widget child,
+      
+      // The duration of a single animation cycle.
+      // Default is Duration(seconds: 3).
+      Duration duration = const Duration(seconds: 3),
+    
+      // The interval between repeating animation cycles.
+      // Default is Duration(seconds: 0).
+      Duration interval = const Duration(seconds: 0),
+    
+      // The color of the animation overlay.
+      // Default is Colors.white.
+      Color color = Colors.white,
+    
+      // The opacity of the animation overlay color.
+      // Default is 0.3.
+      double colorOpacity = 0.3,
+    
+      // Toggles the animation on or off.
+      // Default is true.
+      bool enabled = true,
+    
+      // The direction of the animation.
+      // Default is ShimmerDirection.fromLTRB().
+      ShimmerDirection direction = const ShimmerDirection.fromLTRB(),
+  )
+  ```
 
+📚 A complete API reference can be found [here](https://pub.dev/documentation/shimmer_animation/latest/shimmer_animation/)
 
-### Parameters:
+## 🤝 Contributing
+Contributions, issues, and feature requests are welcome! Feel free to check the issues page.
 
-- @required _**child**_ : accepts a child _Widget_ over which the animation is to be displayed
-- _**color**_ : accepts a parameter of type _Color_ and sets the color of the animation overlay. Default value is _Colors.white_
-- _**color**_ : accepts a parameter of type _double_ and sets the Opacity of the color of the animation overlay. Default value is _0.3_
-- _**enabled**_ : accepts a _bool_ which toggles the animation on/off. Default value is _true_
-- _**duration**_ : accepts a _Duration_ that would be the time period of animation. Default value is _Duration(seconds: 3)_
-- _**interval**_ : accepts a _Duration_ that would be the interval between the repeating animation. Default value is _Duration(seconds: 0)_ i.e. no interval
-- _**direction**_ : accepts a _ShimmerDirection_ and aligns the animation accordingly. Default value is _ShimmerDirection.fromLBRT()_
+## 📄 License
 
-A detailed API Reference can be found [here](https://pub.dev/documentation/shimmer_animation/latest/shimmer_animation/shimmer_animation-library.html).
-
-## License
-
-[MIT License](https://github.com/maddyb99/shimmer_animation/blob/master/LICENSE).
-
-[Shimmer Animation]: #shimmer-animation
-[Examples]: #examples
-[How to use]: #how-to-use
-[Parameters]: #parameters
-[License]: #license
-
+This project is licensed under the [MIT License](./LICENSE)
