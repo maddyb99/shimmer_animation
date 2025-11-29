@@ -1,4 +1,4 @@
-library shimmer_animation;
+library;
 
 import 'package:flutter/material.dart';
 import 'package:shimmer_animation/src/shimmer_animator.dart';

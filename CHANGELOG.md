@@ -1,4 +1,8 @@
-# [2.2.2] - What's new!
+# [2.2.2+1] - What's new!
+
+* Fix static analysis issues
+
+## [2.2.2] - 2025-01-01
 
 * Replace deprecated _**withOpacity()**_ function with the new _**withValues()**_ function
 * Upgrade package versions
@@ -32,7 +36,7 @@
 
 * Added new feature to allow interval between shimmers
 * Patched bug in interval in v0.2.0
-* Update README
+* Update REAflutter analyzecsdkjcnjksDME
 * Update example
 
 **Please upgrade to v0.2.1 instead of v0.2.0**
